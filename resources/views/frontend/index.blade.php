@@ -35,12 +35,9 @@
                 <p class="title"><span>最新活动专区</span><em>/</em><em class="en">Activity</em></p>
                 <div class="activity_list">
                     <ul>
-                        <li class="yj"><a href="http://www.ganxi168.com/join/activity/186.html" target="_blank" class="yj"> <img src="http://www.ganxi168.com/frontend/images/1-150GF92103O6.jpg"><span><i></i><em>卡露丝辣妈华丽变身</em></span></a></li>
-                        <li class="yj"><a href="http://www.ganxi168.com/join/activity/1.html" target="_blank" class="yj"> <img src="http://www.ganxi168.com/frontend/images/1-150G21P0551X.jpg"><span><i></i><em>卡露丝金牌店长训练</em></span></a></li>
-                        <li class="yj"><a href="http://www.ganxi168.com/join/activity/188.html" target="_blank" class="yj"> <img src="http://www.ganxi168.com/frontend/images/1-150H2150G0417.jpg"><span><i></i><em>卡露丝招商峰会</em></span></a></li>
-                        <li class="yj"><a href="http://www.ganxi168.com/join/activity/187.html" target="_blank" class="yj"> <img src="http://www.ganxi168.com/frontend/images/1-150H215043HU.jpg"><span><i></i><em>卡露丝万店冲刺活动</em></span></a></li>
-                        <li class="yj"><a href="http://www.ganxi168.com/join/activity/189.html" target="_blank" class="yj"> <img src="http://www.ganxi168.com/frontend/images/1-150H215214IC.jpg"><span><i></i><em>卡露丝21周年庆典</em></span></a></li>
-
+                        @foreach($huodonglists as $huodonglist)
+                        <li class="yj"><a href="/{{$huodonglist->arctype->real_path}}/{{$huodonglist->id}}.html" target="_blank" class="yj"> <img src="{{$huodonglist->litpic}}"><span><i></i><em>{{$huodonglist->title}}</em></span></a></li>
+                        @endforeach
                     </ul>
                     <div class="both"></div>
                 </div>
@@ -59,7 +56,7 @@
                     <ul>
                         <li class="ico_1"><a href="javascript:void(0)" rel="nofollow" onclick="openZoosUrl();LR_HideInvite();return false;" target="_blank" rel="nofollow">立即咨询</a> </li>
                         <li class="ico_2"><a href="javascript:void(0)" rel="nofollow" onclick="openZoosUrl();LR_HideInvite();return false;" target="_blank" rel="nofollow">咨询专家</a> </li>
-                        <li class="ico_3"><a href="http://web.archive.orghttp://wpa.qq.com/msgrd?v=3&amp;uin=1520540080&amp;site=qq&amp;menu=yes" rel="nofollow">QQ咨询</a> </li>
+                        <li class="ico_3"><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=410547658&amp;site=qq&amp;menu=yes" rel="nofollow">QQ咨询</a> </li>
                         <div class="both"></div>
                     </ul>
                 </div>
@@ -68,19 +65,18 @@
                 <!-- 新闻热点与视频 -->
                 <div class="news_video">
                     <div class="main_news fl"> <p class="title"><span>新闻热点</span><em>/</em><em class="en">news</em><a href="http://www.ganxi168.com/news/" target="_blank" class="fr">MORE</a></p>
-                        <div class="synos"> <a href="http://www.ganxi168.com/news/546.html" target="_blank" class="fl"><img src="http://www.ganxi168.com/frontend/images/1-1P3161401201M-lp.jpg" alt=""></a>
-                            <h3><a href="http://www.ganxi168.com/news/546.html" target="_blank"><font color="#0000FF">干洗店加盟成本：卡露丝准入门槛低引关注</font></a></h3>
-                            <p> 卡露丝干洗店加盟价格合理利润有保障，你还在想着创业吗?你还在为了你的过去没好项目而担心未来如何走吗?现代年轻人不是之前的年轻人，很多人希望能够自主创业，选择一个好的行业是关键，干洗店以成本低、...<a href="http://www.ganxi168.com/news/546.html" target="_blank" rel="nofollow">[详细]</a></p>
-
+                        <div class="synos">
+                            @if(!empty($hotarticle))
+                            <a href="/{{$hotarticle->arctype->real_path}}/{{$hotarticle->id}}.html" target="_blank" class="fl"><img src="{{$hotarticle->litpic}}" alt=""></a>
+                            <h3><a href="/{{$hotarticle->arctype->real_path}}/{{$hotarticle->id}}.html" target="_blank"><font color="#0000FF">{{$hotarticle->title}}</font></a></h3>
+                            <p>{{$hotarticle->description}}...<a href="/{{$hotarticle->arctype->real_path}}/{{$hotarticle->id}}.html" target="_blank">[详细]</a></p>
                             <div class="both"></div>
+                            @endif
                         </div>
                         <ul class="news_list">
-                            <li class="clo"><a href="http://www.ganxi168.com/news/478.html" target="_blank">干洗店加盟的好处</a></li>
-                            <li><a href="http://www.ganxi168.com/news/546.html" target="_blank"><font color="#0000FF">干洗店加盟成本：卡露丝准入门槛低引关注</font></a></li>
-                            <li><a href="http://www.ganxi168.com/news/560.html" target="_blank"><font color="#FF0000">卡露丝干洗店加盟助力创业者2018年一起创造财</font></a></li>
-                            <li><a href="http://www.ganxi168.com/news/556.html" target="_blank">卡露丝干洗店加盟经营哲学：如何控制好干洗</a></li>
-                            <li><a href="http://www.ganxi168.com/news/555.html" target="_blank">干洗店加盟连锁：卡露丝干洗机品牌为您分析</a></li>
-                            <li><a href="http://www.ganxi168.com/news/547.html" target="_blank">怎样开干洗店加盟品牌连锁？卡露丝干洗店设</a></li>
+                            @foreach($newslists as $newslist)
+                            <li class="clo"><a href="/{{$newslist->arctype->real_path}}/{{$newslist->id}}.html" target="_blank">{{$newslist->title}}</a></li>
+                            @endforeach
                         </ul>
                         <div class="both"></div>
                     </div>
@@ -209,7 +205,7 @@
                                 <p></p>
                                 <h3>中国洗衣行业贵族品牌 您身边最贴心的洗衣服务商……</h3>
                             </a>
-                            <a href="http://www.ganxi168.com/kd/md/243.html" title="六安干洗店"> <img src="http://www.ganxi168.com/uploads/1-1510221FZ1b1.jpg" class="lazy" data-original="/frontend/images/1-1510221FZ1b1.jpg" alt="六安干洗店"/>
+                            <a href="http://www.ganxi168.com/kd/md/243.html" title="六安干洗店"> <img src="http://www.ganxi168.com/frontend/images/1-1510221FZ1b1.jpg" class="lazy" data-original="/frontend/images/1-1510221FZ1b1.jpg" alt="六安干洗店"/>
                                 <p></p>
                                 <h3>六安干洗店……</h3>
                             </a>
@@ -221,11 +217,11 @@
                                 <p></p>
                                 <h3>国内首家智能洗衣管理软件 卡露丝远程上门取送POS机……</h3>
                             </a>
-                            <a href="http://www.ganxi168.com/kd/md/244.html" title="兰州干洗店"> <img src="http://www.ganxi168.com/uploads/1-1510221A93U58.jpg" class="lazy" data-original="/uploads/1-1510221A93U58.jpg" alt="兰州干洗店"/>
+                            <a href="http://www.ganxi168.com/kd/md/244.html" title="兰州干洗店"> <img src="http://www.ganxi168.com/frontend/images/1-1510221A93U58.jpg" class="lazy" data-original="/frontend/images/1-1510221A93U58.jpg" alt="兰州干洗店"/>
                                 <p></p>
                                 <h3>卡露丝为国际洗衣产业连锁机构品牌，是国内外知名的洗衣连锁企业，多年来在全球范围内致……</h3>
                             </a>
-                            <a href="http://www.ganxi168.com/kd/md/245.html" title="温州干洗店"> <img src="http://www.ganxi168.com/uploads/1-1510221AJ4N8.png" class="lazy" data-original="/uploads/1-1510221AJ4N8.png" alt="温州干洗店"/>
+                            <a href="http://www.ganxi168.com/kd/md/245.html" title="温州干洗店"> <img src="http://www.ganxi168.com/frontend/images/1-1510221AJ4N8.png" class="lazy" data-original="/frontend/images/1-1510221AJ4N8.png" alt="温州干洗店"/>
                                 <p></p>
                                 <h3>连续3年荣获洗衣连锁NO.1品牌，全新经营模式，7大优势，完善售后服务，大品牌，有保障，干……</h3>
                             </a>
@@ -241,7 +237,7 @@
                                 <p></p>
                                 <h3>学的会，学的慧，国际品牌服务商，技术可靠。……</h3>
                             </a>
-                            <a href="http://www.ganxi168.com/kd/md/238.html" title="珠海干洗店"> <img src="http://www.ganxi168.com/frontend/images/1-150R01532290-L.jpg" class="lazy" data-original="/frontend/images/150820/1-150R01532290-L.jpg" alt="珠海干洗店"/>
+                            <a href="http://www.ganxi168.com/kd/md/238.html" title="珠海干洗店"> <img src="http://www.ganxi168.com/frontend/images/1-150R01532290-L.jpg" class="lazy" data-original="/frontend/images/1-150R01532290-L.jpg" alt="珠海干洗店"/>
                                 <p></p>
                                 <h3>干洗，水洗，皮具护理，洗衣行业专业级洗衣化料，省钱，省心，专业，放心。……</h3>
                             </a>
@@ -278,7 +274,7 @@
                                 </li>
                                 <li class="sfhover">
                                     <p><b>浙江省</b><strong>100人喜欢</strong></p>
-                                    <a href="http://www.ganxi168.com/kd/md/231.html" title="平湖店"><img src="http://www.ganxi168.com/frontend/images/1-150PQ200300-L.jpg" class="lazy" data-original="/frontend/images/150808/1-150PQ200300-L.jpg" alt="平湖店"/>
+                                    <a href="http://www.ganxi168.com/kd/md/231.html" title="平湖店"><img src="http://www.ganxi168.com/frontend/images/1-150PQ200300-L.jpg" class="lazy" data-original="/frontend/images/1-150PQ200300-L.jpg" alt="平湖店"/>
                                         <h4>金牌店长：周敏</h4>
                                     </a>
                                 </li>
@@ -296,7 +292,7 @@
                                 </li>
                                 <li class="sfhover">
                                     <p><b>六安市</b><strong>100人喜欢</strong></p>
-                                    <a href="http://www.ganxi168.com/kd/md/243.html" title="六安干洗店"><img src="http://www.ganxi168.com/1-1510221FZ1b1.jpg" class="lazy" data-original="/uploads/1-1510221FZ1b1.jpg" alt="六安干洗店"/>
+                                    <a href="http://www.ganxi168.com/kd/md/243.html" title="六安干洗店"><img src="http://www.ganxi168.com/frontend/images/1-1510221FZ1b1.jpg" class="lazy" data-original="/frontend/images/1-1510221FZ1b1.jpg" alt="六安干洗店"/>
                                         <h4>金牌店长：赵瑞涛</h4>
                                     </a>
                                 </li>
@@ -308,19 +304,19 @@
                                 </li>
                                 <li class="sfhover">
                                     <p><b>泸州市</b><strong>100人喜欢</strong></p>
-                                    <a href="http://www.ganxi168.com/kd/md/241.html" title="泸州干洗店"><img src="http://www.ganxi168.com/uploads/1-1510221F2134T.jpg" class="lazy" data-original="/uploads/1-1510221F2134T.jpg" alt="泸州干洗店"/>
+                                    <a href="http://www.ganxi168.com/kd/md/241.html" title="泸州干洗店"><img src="http://www.ganxi168.com/frontend/images/1-1510221F2134T.jpg" class="lazy" data-original="/frontend/images/1-1510221F2134T.jpg" alt="泸州干洗店"/>
                                         <h4>金牌店长：康泽金</h4>
                                     </a>
                                 </li>
                                 <li class="sfhover">
                                     <p><b>兰州市</b><strong>100人喜欢</strong></p>
-                                    <a href="http://www.ganxi168.com/kd/md/244.html" title="兰州干洗店"><img src="http://www.ganxi168.com/uploads/1-1510221A93U58.jpg" class="lazy" data-original="/uploads/1-1510221A93U58.jpg" alt="兰州干洗店"/>
+                                    <a href="http://www.ganxi168.com/kd/md/244.html" title="兰州干洗店"><img src="http://www.ganxi168.com/frontend/images/1-1510221A93U58.jpg" class="lazy" data-original="/frontend/images/1-1510221A93U58.jpg" alt="兰州干洗店"/>
                                         <h4>金牌店长：唐买糖</h4>
                                     </a>
                                 </li>
                                 <li class="sfhover">
                                     <p><b>温州市</b><strong>100人喜欢</strong></p>
-                                    <a href="http://www.ganxi168.com/kd/md/245.html" title="温州干洗店"><img src="http://www.ganxi168.com/uploads/1-1510221AJ4N8.png" class="lazy" data-original="/uploads/1-1510221AJ4N8.png" alt="温州干洗店"/>
+                                    <a href="http://www.ganxi168.com/kd/md/245.html" title="温州干洗店"><img src="http://www.ganxi168.com/frontend/images/1-1510221AJ4N8.png" class="lazy" data-original="/frontend/images/1-1510221AJ4N8.png" alt="温州干洗店"/>
                                         <h4>金牌店长：孙光华</h4>
                                     </a>
                                 </li>
@@ -388,7 +384,7 @@
                                             <tr>
                                                 <td><table width="290" border="0">
                                                         <tr>
-                                                            <td><img src="http://www.ganxi168.com/uploads/images/广东清远店.jpg" width="100" height="60"></td>
+                                                            <td><img src="http://www.ganxi168.com/frontend/images/广东清远店.jpg" width="100" height="60"></td>
                                                             <td>恭贺广东清远店干洗连锁店开业</td>
                                                         </tr>
                                                     </table></td>
@@ -396,7 +392,7 @@
                                             <tr>
                                                 <td><table width="290" border="0">
                                                         <tr>
-                                                            <td><img src="http://www.ganxi168.com/uploads/images/广西桂林店.jpg" width="100" height="60"></td>
+                                                            <td><img src="http://www.ganxi168.com/frontend/images/广西桂林店.jpg" width="100" height="60"></td>
                                                             <td>恭贺广西桂林店干洗连锁店开业</td>
                                                         </tr>
                                                     </table></td>
@@ -404,7 +400,7 @@
                                             <tr>
                                                 <td><table width="290" border="0">
                                                         <tr>
-                                                            <td><img src="http://www.ganxi168.com/uploads/images/贵州兴义店.jpg" width="100" height="60"></td>
+                                                            <td><img src="http://www.ganxi168.com/frontend/images/贵州兴义店.jpg" width="100" height="60"></td>
                                                             <td>恭贺贵州兴义店干洗连锁店开业</td>
                                                         </tr>
                                                     </table></td>
@@ -412,7 +408,7 @@
                                             <tr>
                                                 <td><table width="290" border="0">
                                                         <tr>
-                                                            <td><img src="http://www.ganxi168.com/uploads/images/贵州遵义店.jpg" width="100" height="60"></td>
+                                                            <td><img src="http://www.ganxi168.com/frontend/images/贵州遵义店.jpg" width="100" height="60"></td>
                                                             <td>恭贺贵州遵义店干洗连锁店开业</td>
                                                         </tr>
                                                     </table></td>
@@ -420,7 +416,7 @@
                                             <tr>
                                                 <td><table width="290" border="0">
                                                         <tr>
-                                                            <td><img src="http://www.ganxi168.com/uploads/images/河北邢台市.jpg" width="100" height="60"></td>
+                                                            <td><img src="http://www.ganxi168.com/frontend/images/河北邢台市.jpg" width="100" height="60"></td>
                                                             <td>恭贺河北邢台市干洗连锁店开业</td>
                                                         </tr>
                                                     </table></td>
@@ -428,7 +424,7 @@
                                             <tr>
                                                 <td><table width="290" border="0">
                                                         <tr>
-                                                            <td><img src="http://www.ganxi168.com/uploads/images/河南开封店.jpg" width="100" height="60"></td>
+                                                            <td><img src="http://www.ganxi168.com/frontend/images/河南开封店.jpg" width="100" height="60"></td>
                                                             <td>恭贺河南开封店干洗连锁店开业</td>
                                                         </tr>
                                                     </table></td>
@@ -436,7 +432,7 @@
                                             <tr>
                                                 <td><table width="290" border="0">
                                                         <tr>
-                                                            <td><img src="http://www.ganxi168.com/uploads/images/湖北武汉店.jpg" width="100" height="60"></td>
+                                                            <td><img src="http://www.ganxi168.com/frontend/images/湖北武汉店.jpg" width="100" height="60"></td>
                                                             <td>恭贺湖北武汉店干洗连锁店开业</td>
                                                         </tr>
                                                     </table></td>
@@ -444,7 +440,7 @@
                                             <tr>
                                                 <td><table width="290" border="0">
                                                         <tr>
-                                                            <td><img src="http://www.ganxi168.com/uploads/images/湖南邵阳店.jpg" width="100" height="60"></td>
+                                                            <td><img src="http://www.ganxi168.com/frontend/images/湖南邵阳店.jpg" width="100" height="60"></td>
                                                             <td>恭贺湖南邵阳店干洗连锁店开业</td>
                                                         </tr>
                                                     </table></td>
@@ -452,7 +448,7 @@
                                             <tr>
                                                 <td><table width="290" border="0">
                                                         <tr>
-                                                            <td><img src="http://www.ganxi168.com/uploads/images/吉林龙井店.jpg" width="100" height="60"></td>
+                                                            <td><img src="http://www.ganxi168.com/frontend/images/吉林龙井店.jpg" width="100" height="60"></td>
                                                             <td>恭贺吉林龙井店干洗连锁店开业</td>
                                                         </tr>
                                                     </table></td>
@@ -460,7 +456,7 @@
                                             <tr>
                                                 <td><table width="290" border="0">
                                                         <tr>
-                                                            <td><img src="http://www.ganxi168.com/uploads/images/江西抚州店.jpg" width="100" height="60"></td>
+                                                            <td><img src="http://www.ganxi168.com/frontend/images/江西抚州店.jpg" width="100" height="60"></td>
                                                             <td>恭贺江西抚州店干洗连锁店开业</td>
                                                         </tr>
                                                     </table></td>
@@ -468,7 +464,7 @@
                                             <tr>
                                                 <td><table width="290" border="0">
                                                         <tr>
-                                                            <td><img src="http://www.ganxi168.com/uploads/images/内蒙呼市店.jpg" width="100" height="60"></td>
+                                                            <td><img src="http://www.ganxi168.com/frontend/images/内蒙呼市店.jpg" width="100" height="60"></td>
                                                             <td>恭贺内蒙呼市店干洗连锁店开业</td>
                                                         </tr>
                                                     </table></td>
@@ -476,7 +472,7 @@
                                             <tr>
                                                 <td><table width="290" border="0">
                                                         <tr>
-                                                            <td><img src="http://www.ganxi168.com/uploads/images/宁厦银川店.jpg" width="100" height="60"></td>
+                                                            <td><img src="http://www.ganxi168.com/frontend/images/宁厦银川店.jpg" width="100" height="60"></td>
                                                             <td>恭贺宁厦银川店干洗连锁店开业</td>
                                                         </tr>
                                                     </table></td>
@@ -484,7 +480,7 @@
                                             <tr>
                                                 <td><table width="290" border="0">
                                                         <tr>
-                                                            <td><img src="http://www.ganxi168.com/uploads/images/青海西宁店.jpg" width="100" height="60"></td>
+                                                            <td><img src="http://www.ganxi168.com/frontend/images/青海西宁店.jpg" width="100" height="60"></td>
                                                             <td>恭贺青海西宁店干洗连锁店开业</td>
                                                         </tr>
                                                     </table></td>
@@ -492,7 +488,7 @@
                                             <tr>
                                                 <td><table width="290" border="0">
                                                         <tr>
-                                                            <td><img src="http://www.ganxi168.com/uploads/images/山东滕州店.jpg" width="100" height="60"></td>
+                                                            <td><img src="http://www.ganxi168.com/frontend/images/山东滕州店.jpg" width="100" height="60"></td>
                                                             <td>恭贺山东滕州店干洗连锁店开业</td>
                                                         </tr>
                                                     </table></td>
@@ -500,7 +496,7 @@
                                             <tr>
                                                 <td><table width="290" border="0">
                                                         <tr>
-                                                            <td><img src="http://www.ganxi168.com/uploads/images/山东枣庄店.jpg" width="100" height="60"></td>
+                                                            <td><img src="http://www.ganxi168.com/frontend/images/山东枣庄店.jpg" width="100" height="60"></td>
                                                             <td>恭贺山东枣庄店干洗连锁店开业</td>
                                                         </tr>
                                                     </table></td>
@@ -508,7 +504,7 @@
                                             <tr>
                                                 <td><table width="290" border="0">
                                                         <tr>
-                                                            <td><img src="http://www.ganxi168.com/uploads/images/陕西西安店.jpg" width="100" height="60"></td>
+                                                            <td><img src="http://www.ganxi168.com/frontend/images/陕西西安店.jpg" width="100" height="60"></td>
                                                             <td>恭贺陕西西安店干洗连锁店开业</td>
                                                         </tr>
                                                     </table></td>
@@ -516,7 +512,7 @@
                                             <tr>
                                                 <td><table width="290" border="0">
                                                         <tr>
-                                                            <td><img src="http://www.ganxi168.com/uploads/images/四川内江店.jpg" width="100" height="60"></td>
+                                                            <td><img src="http://www.ganxi168.com/frontend/images/四川内江店.jpg" width="100" height="60"></td>
                                                             <td>恭贺四川内江店干洗连锁店开业</td>
                                                         </tr>
                                                     </table></td>
@@ -524,7 +520,7 @@
                                             <tr>
                                                 <td><table width="290" border="0">
                                                         <tr>
-                                                            <td><img src="http://www.ganxi168.com/uploads/images/云南丽江店.jpg" width="100" height="60"></td>
+                                                            <td><img src="http://www.ganxi168.com/frontend/images/云南丽江店.jpg" width="100" height="60"></td>
                                                             <td>恭贺云南丽江店干洗连锁店开业</td>
                                                         </tr>
                                                     </table></td>
@@ -532,7 +528,7 @@
                                             <tr>
                                                 <td><table width="290" border="0">
                                                         <tr>
-                                                            <td><img src="http://www.ganxi168.com/uploads/images/浙江温州店.jpg" width="100" height="60"></td>
+                                                            <td><img src="http://www.ganxi168.com/frontend/images/浙江温州店.jpg" width="100" height="60"></td>
                                                             <td>恭贺浙江温州店干洗连锁店开业</td>
                                                         </tr>
                                                     </table></td>
@@ -1017,9 +1013,8 @@
                                 <p>卡露丝宣传海报</p>
                             </a> <a class="woman_15 fl"><img src="http://www.ganxi168.com/frontend/images/woman_gc_16.jpg" alt="卡露丝宣传海报" width="113" height="113">
                                 <p>卡露丝宣传海报</p>
-                            </a> <a class="woman_16 fl"><img src="http://www.ganxi168.com/frontend/images/woman_gc_17.jpg" alt="卡露丝宣传海报" width="283" height="113">
-                                <p>卡露丝宣传海报</p>
-                            </a> </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
 

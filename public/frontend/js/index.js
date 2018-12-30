@@ -12,7 +12,6 @@ function hover_cur_index(btn,cnt,cur,num){
 
 
 $(document).ready(function(){
-	//顶部横幅
 	$('.banner').hover(function(){
 			$('.banner .prev').fadeIn();
 			$('.banner .next').fadeIn();
@@ -23,7 +22,6 @@ $(document).ready(function(){
 	 );
 	jQuery(".banner").slide({ mainCell:".bd ul",effect:"fade",trigger:"click",autoPlay:true});
 
-	//活动专区
 	hover_cur('.activity_list ul li','','first');
 
 	hover_cur('.star_nav ul li','.star_img_ul','hover');

@@ -26,7 +26,7 @@ class ListNewsController extends Controller
         $thistypeinfo=Arctype::where('id',$typeid)->first();
         if ($thistypeinfo->reid)
         {
-            $typeids=Arctype::where('reid',$typeid)->pluck('id');
+            $typeids=Arctype::where('reid',$thistypeinfo->reid)->pluck('id');
             $sontypes=Arctype::whereIn('id',$typeids)->get();
         }else{
             $sontypes=Arctype::where('reid',$typeid)->get();
@@ -43,12 +43,35 @@ class ListNewsController extends Controller
                 $cid,//传入分类id,
                 $pagelists//传入原始分页器
             );
-            return view('frontend.list_article',compact('thistypeinfo','pagelists','hotnew','cnewtop','cnew','cnewtops','topbrands','latestbrands','latesenews','abrandlists'));
+            return view('frontend.list_article',compact('thistypeinfo','pagelists','sontypes','productions','mendianlists'));
         }elseif (Arctype::where('id',$typeid)->value('mid')==1)
         {
-
             return view('frontend.index_lists',compact('thistypeinfo','pagelists','productions','mendianlists','sontypes'));
         }
+    }
+
+    /**设备列表页
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+
+    public function shebeiList(Request $request,$page=0)
+    {
+        $typeid=Arctype::where('real_path',preg_replace('/\/page\/[0-9]+/','',$request->path()))->value('id')?:abort(404);
+        $thistypeinfo=Arctype::where('id',$typeid)->first();
+        $cid=$request->path();
+        if ($thistypeinfo->reid)
+        {
+            $pagelists=Archive::where('typeid',$typeid)->orderBy('published_at','desc')->paginate($perPage = 13, $columns = ['*'], $pageName = 'page', $page);
+        }else{
+            $typeids=Arctype::where('reid',$thistypeinfo->reid)->pluck('id');
+            $pagelists=Archive::whereIn('typeid',$typeids)->orderBy('id','desc')->paginate($perPage = 13, $columns = ['*'], $pageName = 'page', $page);
+        }
+        $pagelists= Paginator::transfer(
+            $cid,//传入分类id,
+            $pagelists//传入原始分页器
+        );
+        return view('frontend.shebei_list',compact('thistypeinfo','pagelists','sontypes','productions','mendianlists'));
 
     }
 }

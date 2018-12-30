@@ -33,7 +33,7 @@ $(function(){
 		})
 	})
 
- //ÏÂÀ­
+ //ï¿½ï¿½ï¿½ï¿½
 $(function() {
 	var bBtn = false;
 	var bW=false;
@@ -198,7 +198,6 @@ $(document).ready(function(){
 
 (function($) {
 	$.fn.extend({
-   //µ¼º½Ð§¹û·â×°
 		nav:function() {
 			this.hover(function() {
 				$(this).stop().animate({
@@ -218,9 +217,6 @@ $(document).ready(function(){
 })(jQuery);
 
 
-
-
-//bannerÐ§¹û·â×°
 (function($) {
 	$.fn.banner = function(o) {
 		$.extend({
@@ -359,14 +355,14 @@ $(document).ready(function(){
 	}
 })(jQuery);
 
-//°´Å¥banner
+//ï¿½ï¿½Å¥banner
 $(function() {
-	//var sWidth = $("#focusindex").width(); //»ñÈ¡½¹µãÍ¼µÄ¿í¶È£¨ÏÔÊ¾Ãæ»ý£©
-	var len = $("#focusindex ul li").length; //»ñÈ¡½¹µãÍ¼¸öÊý
+	//var sWidth = $("#focusindex").width(); //ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Í¼ï¿½Ä¿ï¿½È£ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½
+	var len = $("#focusindex ul li").length; //ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½
 	var index = 0;
 	var picTimer;
 	
-	//ÒÔÏÂ´úÂëÌí¼ÓÊý×Ö°´Å¥ºÍ°´Å¥ºóµÄ°ëÍ¸Ã÷Ìõ£¬»¹ÓÐÉÏÒ»Ò³¡¢ÏÂÒ»Ò³Á½¸ö°´Å¥
+	//ï¿½ï¿½ï¿½Â´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö°ï¿½Å¥ï¿½Í°ï¿½Å¥ï¿½ï¿½Ä°ï¿½Í¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Ò³ï¿½ï¿½ï¿½ï¿½Ò»Ò³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å¥
 	var btn = "<div class='btn'>";
 	for(var i=0; i < len; i++) {
 		btn += "<span></span>";
@@ -374,14 +370,14 @@ $(function() {
 	btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
 	$("#focusindex").append(btn);
 
-	//ÎªÐ¡°´Å¥Ìí¼ÓÊó±ê»¬ÈëÊÂ¼þ£¬ÒÔÏÔÊ¾ÏàÓ¦µÄÄÚÈÝ
+	//ÎªÐ¡ï¿½ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½ê»¬ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	$("#focusindex .btn span").css("opacity",1).mouseover(function() {
 		index = $("#focusindex .btn span").index(this);
 		showPics(index);
 		
 	}).eq(0).trigger("mouseover");
 
-	//ÉÏÒ»Ò³¡¢ÏÂÒ»Ò³°´Å¥Í¸Ã÷¶È´¦Àí
+	//ï¿½ï¿½Ò»Ò³ï¿½ï¿½ï¿½ï¿½Ò»Ò³ï¿½ï¿½Å¥Í¸ï¿½ï¿½ï¿½È´ï¿½ï¿½ï¿½
 /*	$("#focusindex").hover(function() {
 		$("#focusindex .pre").animate({"left":"10%","opacity":"1"},300);
 		$("#focusindex .next").animate({"right":"10%","opacity":"1"},300);
@@ -390,14 +386,14 @@ $(function() {
 		$("#focusindex .next").animate({"right":"0%","opacity":"0"},300);
 	});*/
 
-	//ÉÏÒ»Ò³°´Å¥
+	//ï¿½ï¿½Ò»Ò³ï¿½ï¿½Å¥
 	$("#focusindex .pre").click(function() {
 		index -= 1;
 		if(index == -1) {index = len - 1;}
 		showPics(index);
 	});
 
-	//ÏÂÒ»Ò³°´Å¥
+	//ï¿½ï¿½Ò»Ò³ï¿½ï¿½Å¥
 	$("#focusindex .next").click(function() {
 		index += 1;
 		if(index == len) {index = 0;}
@@ -417,10 +413,10 @@ $("#focusindex").on("swipeleft",function(){
 	});
 
 
-	//±¾ÀýÎª×óÓÒ¹ö¶¯£¬¼´ËùÓÐliÔªËØ¶¼ÊÇÔÚÍ¬Ò»ÅÅÏò×ó¸¡¶¯£¬ËùÒÔÕâÀïÐèÒª¼ÆËã³öÍâÎ§ulÔªËØµÄ¿í¶È
+	//ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Ò¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½liÔªï¿½Ø¶ï¿½ï¿½ï¿½ï¿½ï¿½Í¬Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ó¸¡¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î§ulÔªï¿½ØµÄ¿ï¿½ï¿½
 	//$("#focusindex ul").css("width",sWidth * (len));
 	
-	//Êó±ê»¬ÉÏ½¹µãÍ¼Ê±Í£Ö¹×Ô¶¯²¥·Å£¬»¬³öÊ±¿ªÊ¼×Ô¶¯²¥·Å
+	//ï¿½ï¿½ê»¬ï¿½Ï½ï¿½ï¿½ï¿½Í¼Ê±Í£Ö¹ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½Å£ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ê¼ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½
 	$("#focusindex").hover(function() {
 		clearInterval(picTimer);
 	},function() {
@@ -428,23 +424,23 @@ $("#focusindex").on("swipeleft",function(){
 			showPics(index);
 			index++;
 			if(index == len) {index = 0;}
-		},4000); //´Ë4000´ú±í×Ô¶¯²¥·ÅµÄ¼ä¸ô£¬µ¥Î»£ººÁÃë
+		},4000); //ï¿½ï¿½4000ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ÅµÄ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	}).trigger("mouseleave");
 	
-	//ÏÔÊ¾Í¼Æ¬º¯Êý£¬¸ù¾Ý½ÓÊÕµÄindexÖµÏÔÊ¾ÏàÓ¦µÄÄÚÈÝ
-	function showPics(index) { //ÆÕÍ¨ÇÐ»»
-		//var nowLeft = -index*sWidth; //¸ù¾ÝindexÖµ¼ÆËãulÔªËØµÄleftÖµ
-		//$("#focusindex ul").stop(true,false).animate({"left":nowLeft},300); //Í¨¹ýanimate()µ÷ÕûulÔªËØ¹ö¶¯µ½¼ÆËã³öµÄposition
-		//$("#focusindex .btn span").removeClass("on").eq(index).addClass("on"); //Îªµ±Ç°µÄ°´Å¥ÇÐ»»µ½Ñ¡ÖÐµÄÐ§¹û
-		$("#focusindex .btn span").stop(true,false).removeClass("on").eq(index).stop(true,false).addClass("on"); //Îªµ±Ç°µÄ°´Å¥ÇÐ»»µ½Ñ¡ÖÐµÄÐ§¹û
-		$("#focusindex ul li").stop(true,false).animate({"opacity":"0"},1500).css("z-index",0).removeClass("bannerdh").eq(index).stop(true,false).animate({"opacity":"1"},1500).addClass("bannerdh").css("z-index",1); //Îªµ±Ç°µÄ°´Å¥ÇÐ»»µ½Ñ¡ÖÐµÄÐ§¹û
+	//ï¿½ï¿½Ê¾Í¼Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý½ï¿½ï¿½Õµï¿½indexÖµï¿½ï¿½Ê¾ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	function showPics(index) { //ï¿½ï¿½Í¨ï¿½Ð»ï¿½
+		//var nowLeft = -index*sWidth; //ï¿½ï¿½ï¿½ï¿½indexÖµï¿½ï¿½ï¿½ï¿½ulÔªï¿½Øµï¿½leftÖµ
+		//$("#focusindex ul").stop(true,false).animate({"left":nowLeft},300); //Í¨ï¿½ï¿½animate()ï¿½ï¿½ï¿½ï¿½ulÔªï¿½Ø¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½position
+		//$("#focusindex .btn span").removeClass("on").eq(index).addClass("on"); //Îªï¿½ï¿½Ç°ï¿½Ä°ï¿½Å¥ï¿½Ð»ï¿½ï¿½ï¿½Ñ¡ï¿½Ðµï¿½Ð§ï¿½ï¿½
+		$("#focusindex .btn span").stop(true,false).removeClass("on").eq(index).stop(true,false).addClass("on"); //Îªï¿½ï¿½Ç°ï¿½Ä°ï¿½Å¥ï¿½Ð»ï¿½ï¿½ï¿½Ñ¡ï¿½Ðµï¿½Ð§ï¿½ï¿½
+		$("#focusindex ul li").stop(true,false).animate({"opacity":"0"},1500).css("z-index",0).removeClass("bannerdh").eq(index).stop(true,false).animate({"opacity":"1"},1500).addClass("bannerdh").css("z-index",1); //Îªï¿½ï¿½Ç°ï¿½Ä°ï¿½Å¥ï¿½Ð»ï¿½ï¿½ï¿½Ñ¡ï¿½Ðµï¿½Ð§ï¿½ï¿½
 	}
 });
 
 
 
 
-//ÊÖ·çÇÙÐ§¹û
+//ï¿½Ö·ï¿½ï¿½ï¿½Ð§ï¿½ï¿½
 (function($) {
 	$.fn.shoufq = function(o) {
 		o = $.extend({
@@ -474,7 +470,7 @@ $("#focusindex").on("swipeleft",function(){
 $(function() {
 	
 	
-	//²Ëµ¥Ð§¹û
+	//ï¿½Ëµï¿½Ð§ï¿½ï¿½
 	$('.mbox1>ul>li').each(function() {
         $(this).hover(function(){
 			$('.mbox1 .move_bg').remove();
@@ -490,7 +486,7 @@ $(function() {
     });
 	//banner
     //$('.section_banner1_box').banner({time:400,animStyle:false,addclass:'bannerdh'});
-	//ÏÂÀ­ÏîÄ¿banner
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿banner
 	$('.object_banner1').banner({time:600,animStyle:true});
 	$('.object_banner2').banner({time:600,animStyle:true});
 	$('.object_banner3').banner({time:600,animStyle:true});
@@ -535,17 +531,17 @@ $(function(){
 function expand(el)
 	{
 		var childObj = document.getElementById("child" + el);
-        var header_hot = document.getElementById("header_hot");//¸øid¸½¼ÓÑùÊ½
+        var header_hot = document.getElementById("header_hot");//ï¿½ï¿½idï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 
 		if (childObj.style.display == 'block')
 		{
-			childObj.style.display = 'none';//µã»÷ºó¹Ø±Õ
-			header_hot.style.backgroundPosition="-531px 0";//¸øid¸½¼ÓÑùÊ½
+			childObj.style.display = 'none';//ï¿½ï¿½ï¿½ï¿½ï¿½Ø±ï¿½
+			header_hot.style.backgroundPosition="-531px 0";//ï¿½ï¿½idï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 		}
 		else
 		{
-			childObj.style.display = 'block';//µã»÷ºó´ò¿ª
-			header_hot.style.backgroundPosition="-531px -34px";//¸øid¸½¼ÓÑùÊ½
+			childObj.style.display = 'block';//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			header_hot.style.backgroundPosition="-531px -34px";//ï¿½ï¿½idï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 		}
 		return;
 	}
@@ -554,17 +550,17 @@ function expand(el)
 function expand2(el)
 	{
 		var boxfourObj = document.getElementById("boxfour" + el);
-        var boxthree_msg = document.getElementById("boxthree_msg");//¸øid¸½¼ÓÑùÊ½
+        var boxthree_msg = document.getElementById("boxthree_msg");//ï¿½ï¿½idï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 
 		if (boxfourObj.style.display == 'block')
 		{
-			boxfourObj.style.display = 'none';//µã»÷ºó¹Ø±Õ
-			boxthree_msg.style.backgroundPosition="0 -80px";//¸øid¸½¼ÓÑùÊ½
+			boxfourObj.style.display = 'none';//ï¿½ï¿½ï¿½ï¿½ï¿½Ø±ï¿½
+			boxthree_msg.style.backgroundPosition="0 -80px";//ï¿½ï¿½idï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 		}
 		else
 		{
-			boxfourObj.style.display = 'block';//µã»÷ºó´ò¿ª
-			boxthree_msg.style.backgroundPosition="0 -112px";//¸øid¸½¼ÓÑùÊ½
+			boxfourObj.style.display = 'block';//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			boxthree_msg.style.backgroundPosition="0 -112px";//ï¿½ï¿½idï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 		}
 		return;
 	}
@@ -572,38 +568,38 @@ function expand2(el)
 function expand3(el)
 	{
 		var jieshao_msgsObj = document.getElementById("jieshao_msgs" + el);
-        var jieshao_msg = document.getElementById("jieshao_msg");//¸øid¸½¼ÓÑùÊ½
+        var jieshao_msg = document.getElementById("jieshao_msg");//ï¿½ï¿½idï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 
 		if (jieshao_msgsObj.style.display == 'block')
 		{
-			jieshao_msgsObj.style.display = 'none';//µã»÷ºó¹Ø±Õ
-			jieshao_msg.style.background="url(/img/xga.jpg) 0 0 no-repeat";//¸øid¸½¼ÓÑùÊ½
+			jieshao_msgsObj.style.display = 'none';//ï¿½ï¿½ï¿½ï¿½ï¿½Ø±ï¿½
+			jieshao_msg.style.background="url(/img/xga.jpg) 0 0 no-repeat";//ï¿½ï¿½idï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 		}
 		else
 		{
-			jieshao_msgsObj.style.display = 'block';//µã»÷ºó´ò¿ª
-			jieshao_msg.style.background="url(/img/xgb.jpg) 0 0 no-repeat";//¸øid¸½¼ÓÑùÊ½
+			jieshao_msgsObj.style.display = 'block';//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			jieshao_msg.style.background="url(/img/xgb.jpg) 0 0 no-repeat";//ï¿½ï¿½idï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 		}
 		return;
 	}
 function expand4(el)
 	{
 		var xglistbObj = document.getElementById("xglistb" + el);
-        var xglista = document.getElementById("xglista");//¸øid¸½¼ÓÑùÊ½
-		var contentbox1 = document.getElementById("contentbox1");//¸øid¸½¼ÓÑùÊ½
+        var xglista = document.getElementById("xglista");//ï¿½ï¿½idï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
+		var contentbox1 = document.getElementById("contentbox1");//ï¿½ï¿½idï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 
 		if (xglistbObj.style.display == 'block')
 		{
-			xglistbObj.style.display = 'none';//µã»÷ºó¹Ø±Õ
+			xglistbObj.style.display = 'none';//ï¿½ï¿½ï¿½ï¿½ï¿½Ø±ï¿½
 			contentbox1.style.display = 'block'
-			xglista.style.background="url(/img/listtxtnav_02.jpg) 0 0 no-repeat";//¸øid¸½¼ÓÑùÊ½
+			xglista.style.background="url(/img/listtxtnav_02.jpg) 0 0 no-repeat";//ï¿½ï¿½idï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 			
 		}
 		else
 		{
-			xglistbObj.style.display = 'block';//µã»÷ºó´ò¿ª
+			xglistbObj.style.display = 'block';//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			contentbox1.style.display = 'none'
-			xglista.style.background="url(/img/lsittxtmsg.jpg) 0 0 no-repeat";//¸øid¸½¼ÓÑùÊ½
+			xglista.style.background="url(/img/lsittxtmsg.jpg) 0 0 no-repeat";//ï¿½ï¿½idï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 			$("#al1 ul li a").removeClass("cur");
 			
 		}
@@ -614,7 +610,7 @@ function shoppingcat(){
 	  if(document.getElementById("xglistb1").style.display=="block"){
 		 document.getElementById("xglistb1").style.display ="none";
 		 document.getElementById("contentbox1").style.display="block";
-		 document.getElementById("xglista").style.background="url(/img/listtxtnav_02.jpg) 0 0 no-repeat";//¸øid¸½¼ÓÑùÊ½
+		 document.getElementById("xglista").style.background="url(/img/listtxtnav_02.jpg) 0 0 no-repeat";//ï¿½ï¿½idï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 		 
 	  }else{
 		  document.getElementById("xglistb1").style.display ="none";

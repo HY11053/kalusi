@@ -62,10 +62,10 @@ class CheckToolsController extends Controller
 
         public function updateArticleTime()
         {
-            $articles=Archive::withoutGlobalScope(PublishedScope::class)->where('id','>',180)->pluck('id');
+            $articles=Archive::withoutGlobalScope(PublishedScope::class)->pluck('id');
             foreach ($articles as $article) {
 
-                Archive::withoutGlobalScope(PublishedScope::class)->where('id',$article)->update(['typeid'=>2,'created_at'=>Carbon::now(),'updated_at'=>Carbon::now(),'published_at'=>Carbon::now()]);
+                Archive::withoutGlobalScope(PublishedScope::class)->where('id',$article)->update(['created_at'=>Carbon::now(),'updated_at'=>Carbon::now(),'ismake'=>1,'published_at'=>Carbon::now()]);
             }
             echo '1';
         }
