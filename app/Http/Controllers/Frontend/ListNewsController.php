@@ -62,10 +62,10 @@ class ListNewsController extends Controller
         $cid=$request->path();
         if ($thistypeinfo->reid)
         {
-            $pagelists=Archive::where('typeid',$typeid)->orderBy('published_at','desc')->paginate($perPage = 13, $columns = ['*'], $pageName = 'page', $page);
+            $pagelists=Archive::where('typeid',$typeid)->orderBy('published_at','desc')->paginate($perPage = 12, $columns = ['*'], $pageName = 'page', $page);
         }else{
-            $typeids=Arctype::where('reid',$thistypeinfo->reid)->pluck('id');
-            $pagelists=Archive::whereIn('typeid',$typeids)->orderBy('id','desc')->paginate($perPage = 13, $columns = ['*'], $pageName = 'page', $page);
+            $typeids=Arctype::where('reid',$thistypeinfo->id)->pluck('id');
+            $pagelists=Archive::whereIn('typeid',$typeids)->orderBy('id','desc')->paginate($perPage = 12, $columns = ['*'], $pageName = 'page', $page);
         }
         $pagelists= Paginator::transfer(
             $cid,//传入分类id,

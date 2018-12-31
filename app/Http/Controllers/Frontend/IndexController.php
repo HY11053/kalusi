@@ -19,7 +19,7 @@ class IndexController extends Controller
         $hotarticle=Archive::where('typeid',6)->where('flags','like','%h%')->first();
         $newslists=Archive::where('typeid',6)->take(6)->orderBy('id','desc')->get();
         $flinks=flink::latest()->take(25)->get();
-        return view('frontend.index',compact('huodonglists','flinks','hotarticle','newslists'));
+        return view('frontend.index',compact('huodonglists','hotarticle','newslists','flinks'));
     }
 
 }

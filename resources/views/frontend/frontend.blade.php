@@ -52,7 +52,7 @@
             <a href="http://www.ganxi168.com/xm/">加盟项目</a>
             <a href="http://www.ganxi168.com/kd/">投资开店</a>
             <a href="http://www.ganxi168.com/xy/">培训学院</a>
-            <a href="http://www.ganxi168.com/wsxy/o2o/index.html">网上洗衣</a>
+            <a href="http://www.ganxi168.com/wsxy/o2o/">网上洗衣</a>
             <a class="navRLast" href="http://www.ganxi168.com/kd/dh.html#dh" title="你在烦恼什么?">你在烦恼什么?</a>
         </div>
     </div>

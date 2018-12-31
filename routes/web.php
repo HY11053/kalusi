@@ -13,22 +13,29 @@
 Auth::routes();
 Route::get('/home', 'HomeController@index');
 //前台界面
-Route::group(['domain' => 'm.czga.cn'], function () {
+Route::group(['domain' => 'm.ganxi168.com'], function () {
     Route::get('/','Mobile\IndexController@Index');
-    Route::get('paihangbang','Mobile\PaihangbangController@Paihangbang')->name('paihangbang');
-    Route::get('paihangbang/page/{page}','Mobile\PaihangbangController@Paihangbang')->name('paihangbangpage');
-    Route::post('sprodlist/all/','Mobile\SeacrhController@SeacrhBrand');
-    Route::get('sprodlist/all/','Mobile\SeacrhController@SeacrhBrand');
-    Route::post('phone/complate/list/','Mobile\PhoneController@ComplateBrands');
-    Route::get('{path}','Mobile\ListNewsController@listNews')->where('path','[a-zA-Z0-9]+')->name('newslist');
-    Route::get('{path}/{id}.shtml','Mobile\ArticleController@GetArticle')->where('id', '[0-9]+')->name('articles');
-    Route::get('{path}/page/{page}','Mobile\ListNewsController@listNews')->where('path', '[a-zA-Z0-9/_]+')->name('newspagelist');
-    Route::get('{path}_{tid}_{cid}_{zid}','Mobile\ListNewsController@projectBrandLists')->where(['path'=>'[a-zA-Z0-9_\/]+','tid'=>'[0-9]+','cid'=>'[0-9]+','zid'=>'[0-9]+'])->name('projectlists');
-    Route::get('{path}_{tid}_{cid}_{zid}/page/{page}','Mobile\ListNewsController@projectBrandLists')->where(['path'=>'[a-zA-Z0-9_\/]+','tid'=>'[0-9]+','cid'=>'[0-9]+','zid'=>'[0-9]+','page'=>'[0-9]+'])->name('projectlistspage');
+    Route::get('sb','Mobile\ListNewsController@shebeiList')->where('path','[a-zA-Z\/]+')->name('newslist');
+    Route::get('sb/gx','Mobile\ListNewsController@shebeiList')->where('path','[a-zA-Z\/]+')->name('newslist');
+    Route::get('sb/sx','Mobile\ListNewsController@shebeiList')->where('path','[a-zA-Z\/]+')->name('newslist');
+    Route::get('sb/hg','Mobile\ListNewsController@shebeiList')->where('path','[a-zA-Z\/]+')->name('newslist');
+    Route::get('sb/xx','Mobile\ListNewsController@shebeiList')->where('path','[a-zA-Z\/]+')->name('newslist');
+    Route::get('sb/fz','Mobile\ListNewsController@shebeiList')->where('path','[a-zA-Z\/]+')->name('newslist');
+    Route::get('kd/md','Mobile\ListNewsController@shebeiList')->where('path','[a-zA-Z\/]+')->name('newslist');
+    Route::get('{path}','Mobile\ListNewsController@listNews')->where('path','[a-zA-Z0-9\/]+')->name('newslist');
+    Route::get('{path}/{id}.html','Mobile\ArticleController@GetArticle')->where(['id'=>'[0-9]+','path'=>'[a-zA-Z\/]+'])->name('articles');
+    Route::get('{path}/page/{page}','Mobile\ListNewsController@listNews')->where('path', '[a-zA-Z/]+')->name('newspagelist');
+    Route::post('/phonecomplate/','Mobile\PhoneController@phoneComplate');
 });
 Route::get('/','Frontend\IndexController@Index');
 Route::get('sb','Frontend\ListNewsController@shebeiList')->where('path','[a-zA-Z\/]+')->name('newslist');
-Route::get('{path}','Frontend\ListNewsController@listNews')->where('path','[a-zA-Z\/]+')->name('newslist');
+Route::get('sb/gx','Frontend\ListNewsController@shebeiList')->where('path','[a-zA-Z\/]+')->name('newslist');
+Route::get('sb/sx','Frontend\ListNewsController@shebeiList')->where('path','[a-zA-Z\/]+')->name('newslist');
+Route::get('sb/hg','Frontend\ListNewsController@shebeiList')->where('path','[a-zA-Z\/]+')->name('newslist');
+Route::get('sb/xx','Frontend\ListNewsController@shebeiList')->where('path','[a-zA-Z\/]+')->name('newslist');
+Route::get('sb/fz','Frontend\ListNewsController@shebeiList')->where('path','[a-zA-Z\/]+')->name('newslist');
+Route::get('kd/md','Frontend\ListNewsController@shebeiList')->where('path','[a-zA-Z\/]+')->name('newslist');
+Route::get('{path}','Frontend\ListNewsController@listNews')->where('path','[a-zA-Z0-9\/]+')->name('newslist');
 Route::get('{path}/{id}.html','Frontend\ArticleController@GetArticle')->where(['id'=>'[0-9]+','path'=>'[a-zA-Z\/]+'])->name('articles');
 Route::get('{path}/page/{page}','Frontend\ListNewsController@listNews')->where('path', '[a-zA-Z/]+')->name('newspagelist');
 Route::post('/phonecomplate/','Frontend\PhoneController@phoneComplate');

@@ -32,7 +32,7 @@
                                 <li>
                                     @foreach($productions as $production)
                                     <a href="/{{$production->arctype->real_path}}/{{$production->id}}.html">
-                                        <img src="{{$production->title}}" alt="{{$production->title}}" width="80" height="80">
+                                        <img src="{{$production->litpic}}" alt="{{$production->title}}" width="80" height="80">
                                         {{$production->title}}
                                     </a>
                                    @endforeach

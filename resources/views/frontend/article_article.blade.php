@@ -19,14 +19,14 @@
         <section class="top20">
             <div id="boxl" class="gr">
                 <div id="focus" class="bgfff">
-                    <div class="zj_msg"><a href="/web/20170214155118/http://ganxi58.com/sb/sx/" target="_blank"></a></div>
+                    <div class="zj_msg"><a href="http://ganxi58.com/sb/sx/" target="_blank"></a></div>
                     <div class="titlemb"><span>产品中心</span></div>
                     <div class="doctors_inner">
                         <ul>
                             <li>
                                 @foreach($productions as $production)
                                     <a href="/{{$production->arctype->real_path}}/{{$production->id}}.html">
-                                        <img src="{{$production->title}}" alt="{{$production->title}}" width="80" height="80">
+                                        <img src="{{$production->litpic}}" alt="{{$production->title}}" width="80" height="80">
                                         {{$production->title}}
                                     </a>
                                 @endforeach
@@ -42,7 +42,7 @@
 
                 </div>
                 <div id="focus" class="bgfff">
-                    <div class="zj_msg"><a href="/web/20170214155118/http://ganxi58.com/kd/md/" target="_blank"></a></div>
+                    <div class="zj_msg"><a href="http://ganxi58.com/kd/md/" target="_blank"></a></div>
                     <div class="titlemb"><span>形象店展示</span></div>
                     <div class="doctors_inner">
                         <ul>
@@ -60,7 +60,7 @@
                 <div class="boxlbox">
                     <div class="titlemb2"><span>精彩图文</span></div>
 
-                    <div class="zj_msg"><a href="/web/20170214155118/http://ganxi58.com/xm/fx/" target="_blank"></a></div>
+                    <div class="zj_msg"><a href="http://ganxi58.com/xm/fx/" target="_blank"></a></div>
                     <ul>
 
                         @foreach($cnews as $cnew)
@@ -95,14 +95,10 @@
 
             <div id="boxr" class="gl bgfff">
 
-                <div class="items">当前位置：<a href="http://web.archive.org/web/20170214155118/http://www.ganxi58.com/">主页</a> &gt; <a href="/web/20170214155118/http://ganxi58.com/jt/">集团介绍</a> &gt; <a href="/web/20170214155118/http://ganxi58.com/news/">新闻资讯</a> &gt;  </div>
+                <div class="items">当前位置：<a href="http://www.ganxi58.com/">主页</a> &gt; <a href="http://ganxi58.com/jt/">集团介绍</a> &gt; <a href="http://ganxi58.com/news/">新闻资讯</a> &gt;  </div>
 
                 <div class="content_tie">
-
-                    <a href="/web/20170214155118/http://ganxi58.com/" target="_blank"><img src="/frontend/images/i23.jpg" width="640" height="100"></a>
-
                     <h1>{{$thisarticleinfos->title}}</h1>
-
                     <p>时间：{{$thisarticleinfos->created_at}}   | 来源：<span>卡露丝国际洗衣</span></p>
 
                 </div>

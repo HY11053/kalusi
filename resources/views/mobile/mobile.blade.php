@@ -1,96 +1,111 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
-    <meta name="wap-font-scale" content="no"/>
-    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="applicable-device" content="mobile">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta http-equiv="Cache-Control" content="no-cache"/>
-    <meta name="csrf-token" content=" {{ csrf_token() }}">
-    <title>@yield('title')</title>
-    <meta name="keywords" content="@yield('keywords')"/>
-    <meta name="description" content="@yield('description')"/>
-    <link rel="canonical" href="{{config('app.url')}}{{Request::getrequesturi()}}" >
-    <link rel="miphtml" href="{{str_replace('http://www.','http://mip.',config('app.url'))}}{{Request::getrequesturi()}}">
-    <link href="/mobile/css/common.css" rel="stylesheet" type="text/css"/>
     @yield('headlibs')
+    <link href="/mobile/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/mobile/css/bootstrap-theme.min.css">
+    <link href="/mobile/css/style.css" rel="stylesheet">
 </head>
 <body>
-<div class="header clearfix mtop84">
-    <div class="search clearfix">
-        <div class="city fl">
-            <a href="/"><img src="/mobile/images/nav-logo2.png" alt="干洗店投资网"/></a>
-        </div>
-        <div class="searchCon fl">
-            <form action="/sprodlist/all/" method="post">
-                {{csrf_field()}}
-            <div class="ipt-box"></div>
-            <input class="ipt-placeholder" placeholder="输入您想找的项目" />
-            <button type="submit" class="search_btn"></button>
-            </form>
-        </div>
-        <div class="message fr">
-            <b>项目分类</b>
-        </div>
-        <div class="d_nav">
-            <ul>
-                <li><a href="/" target="_self"><span>首页</span></a></li>
-                <li><a href="/item/" target="_self"><span>品牌大全</span></a></li>
-                <li><a href="/cost/" target="_self"><span>干洗店成本</span></a></li>
-                <li><a href="/investment/" target="_self"><span>干洗店投资</span></a></li>
-                <li><a href="/profit/" target="_self"><span>干洗店利润</span></a></li>
-                <li><a href="/devices/" target="_self"><span>干洗店设备</span></a></li>
-                <li><a href="/technology/" target="_self"><span>干洗技术</span></a></li>
-                <li><a href="/news/" target="_self"><span>品牌新闻</span></a></li>
-                <li><a href="/paihangbang/" target="_self"><span>干洗店排行榜</span></a></li>
-            </ul>
-        </div>
-
+<nav class="navbar navbar-default" style="margin:0px; padding:0px; position:relative;" >
+    <div style="line-height:0;"><img src="/mobile/images/logo.jpg" width="100%"/></div>
+    <div class="navbar-header" >
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" style="position:absolute; right:0; top:14px;" >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
     </div>
-
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li><a href="/">首页</a></li>
+            <li><a href="/jt/">集团介绍</a></li>
+            <li><a href="/sb/">洗护设备</a></li>
+            <li><a href="/join/">加盟服务</a></li>
+            <li><a href="/xm/">加盟项目</a></li>
+            <li><a href="/kd/">投资开店</a></li>
+            <li><a href="/news/">新闻资讯</a></li>
+            <li><a href="join/bk/">洗涤百科</a></li>
+            <li><a href="/kd/yw/">开店疑问</a></li>
+        </ul>
+    </div>
+</nav>
+<!--幻灯-->
+<p class="bg-primary">  <em class="col-xs-10"><span class="glyphicon glyphicon-phone-alt "> </span><a href="tel:4008-856-638">拨打咨询电话-400-8856-638</a> </em><a href="javascript:void(0);" onclick="openZoosUrl();return false;" class="col-xs-1"><span class="glyphicon glyphicon-comment "></span></a></p>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <a href="javascript:void(0)" onclick="openZoosUrl();return false;"><img class="center-block" src="/mobile/images/1.jpg" alt="卡露丝国际洗衣店面展示"></a>
+        </div>
+        <div class="item">
+            <a href="javascript:void(0)" onclick="openZoosUrl();return false;"><img class="center-block" src="/mobile/images/2.jpg" alt="卡露丝国际洗衣店面展示"></a>
+        </div>
+        <div class="item">
+            <a href="javascript:void(0)" onclick="openZoosUrl();return false;"><img class="center-block" src="/mobile/images/3.jpg" alt="卡露丝国际洗衣店面展示"></a>
+        </div>
+    </div>
 </div>
 @yield('main_content')
+<div class="liuyan">
+    <p>成功致富，从一个电话开始<a href="tel:400-123-4567"></a></p>
+    <p>现在留言，免费获取详细加盟资料以及多重好礼</p>
+    <form onsubmit="return false;">
+        <ul class="lyBox">
+            <div class="col-md-12 col-xs-12">
+                <li> <span>姓名：</span>
+                    <input type="text"  class="form-control" id="exampleInputAmount" placeholder="您的称呼">
+                </li>
+                <li> <span>电话：</span>
+                    <input type="text" name="bd_bp_messPhone" class="form-control" id="exampleInputAmount2" name="visitorPhone"  placeholder="您的电话">
+                </li>
+                <li> <span>留言：</span>
+                    <textarea class="form-control" rows="3" id="notes" name="content" placeholder="备注信息" ></textarea>
+                </li>
+                <li><button type="submit" id="tj_btn" class="btn btn-warning search-submit">提交</button></li>
+            </div>
+        </ul>
+    </form>
+</div>
 <footer>
-    <div class="link-box ">
-        <a href="{{config('app.url')}}" class="foot-link">电脑版</a><span class="v-line">|</span>
-        <a href="/cost/" class="foot-link">干洗店成本</a><span class="v-line">|</span>
-        <a href="/profit/" class="foot-link">干洗店利润</a><span class="v-line">|</span>
-        <a href="/investment/" class="foot-link">干洗店投资</a><span class="v-line">|</span>
-        <a href="/paihangbang/" class="foot-link">品牌排行榜</a>
-    </div>
-    <p class="firm clearfix">
-        <span class="foot-text mgr15">上海桥梓网络科技有限公司 版权所有</span>
-    </p>
-</footer>
-<script type="text/javascript" src="/frontend/js/jquery.min.js"></script>
-<script type="text/javascript" src="/frontend/js/swiper.min.js"></script>
-<script type="text/javascript" src="/mobile/js/index.js"></script>
-@yield('footlibs')
-<script>
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
-<script>
-    var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?c0c4697bdb0833b34ad0e623c45fbf68";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
+    <div class="bottomFooter">
+        <div class="address_info relative">
+            <div class="address_pic1 absolute"></div>
+            <!--<div class="address_pic2 absolute"></div>-->
+            <address class="col-xs-offset-5">
+                <span class="glyphicon glyphicon-earphone"></span> 400-8856-638 <br>
+                <span class="glyphicon glyphicon-ok-circle"></span> 沪ICP备14001404号-22<br>
+                <span class="glyphicon glyphicon-map-marker"></span> 上海市沪路4361号（呼叫中心产业基地）
+                Copyright@2007-2018 卡露丝国际洗衣集团干洗店加盟 <br>
+                <span class="glyphicon glyphicon-ok-circle"></span>  上海优喜洗烫设备有限公司 <br>
+            </address>
 
+        </div>
+    </div>
+</footer>
+<script src="/mobile/js/jquery.min.js"></script>
+<script src="/mobile/js/bootstrap.min.js"></script>
+@if(!Jenssegers\Agent\Facades\Agent::isRobot())
+
+@endif
+<script>
+    $(function(){
+        $(".zonghe-nav li").click(function(){
+            $(this).children(".zonghe-con").css("display","block");
+            $(this).siblings().children(".zonghe-con").css("display","none");
+            $(this).children("h3").attr("class","zonghe-nav-moren");
+            $(this).siblings().children("h3").removeAttr("class","zonghe-nav-moren");
+        })
+        $("#content img").addClass("img-responsive center-block").css('height','auto').css('border-radius','5px');
+    });
+</script>
 </body>
 </html>

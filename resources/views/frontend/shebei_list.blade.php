@@ -17,15 +17,13 @@
     <dl class="pd_list_dl">
         <dt>
             <a target="_blank" href="/{{$pagelist->arctype->real_path}}/{{$pagelist->id}}.html" title="{{$pagelist->title}}">
-            <img src="/{{$pagelist->arctype->real_path}}/{{$pagelist->id}}.html" alt="{{$pagelist->title}}" title="{{$pagelist->title}}"></a>
+            <img src="{{$pagelist->litpic}}" alt="{{$pagelist->title}}" title="{{$pagelist->title}}"></a>
         </dt>
         <dd>
             <a target="_blank" href="/{{$pagelist->arctype->real_path}}/{{$pagelist->id}}.html" title="{{$pagelist->title}}">{{$pagelist->title}}</a>
         </dd>
     </dl>
     @endforeach
-
-
 </div>
 <div class="pagination-wrapper">
     {!! $pagelists->links() !!}

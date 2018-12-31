@@ -1,100 +1,33 @@
 @extends('mobile.mobile')
-@section('title'){{$thisarticleinfos->title}}-{{config('app.indexname')}}@stop
-@section('keywords'){{$thisarticleinfos->keywords}}@stop
-@section('description'){{$thisarticleinfos->description}}@stop
 @section('headlibs')
-    <link href="/mobile/css/article.css" rel="stylesheet" type="text/css"/>
-    <link href="/mobile/css/brand.css" rel="stylesheet" type="text/css"/>
-    <link href="/frontend/css/swiper.min.css" rel="stylesheet" type="text/css"/>
+    <title>{{$thisarticleinfos->title}}_UCC干洗</title>
+    <meta name="description" content="{{$thisarticleinfos->description}}">
+    <meta name="keywords" content="{{$thisarticleinfos->keywords}}">
+    <link rel="canonical" href="{{config('app.url')}}{{Request::getrequesturi()}}" >
 @stop
 @section('main_content')
-<div class="weizhi">
-    <span> <a href="/">首页</a>&nbsp;>&nbsp;<a href="{{str_replace('www.','m.',config('app.url'))}}/{{\App\AdminModel\Arctype::where('id',$thisarticleinfos->typeid)->value('real_path')}}/">{{\App\AdminModel\Arctype::where('id',$thisarticleinfos->typeid)->value('typename')}}</a>&nbsp;>&nbsp;    正文：  </span>
-</div>
-<div class="list_middle">
-    <div class="a_content_brand">
-        <div class="a_content">
-            <h1>{{$thisarticleinfos->title}}</h1>
-            <small>时间：{{$thisarticleinfos->created_at}}&nbsp;&nbsp;&nbsp;&nbsp;浏览量:{{$thisarticleinfos->click}}</small>
+<p class="bg-primary">　<a href='/'>UCC洗衣店加盟</a> > <a href='/{{$thistypeinfo->real_path}}/'>{{$thistypeinfo->typename}}</a></p>
+<div class="container-fluid list_clear">
+    <div clas="row">
+        <div class="col-xs-12">
+            <div id="content">
+                <h1>{{$thisarticleinfos->title}}</h1>
+                <small>时间：{{$thisarticleinfos->created_at}}　|　浏览量:{{$thisarticleinfos->click}}</small>
+                {!! $thisarticleinfos->body !!}
+             </div>
+        </div>
+        <div class="shangxiapian clearfix">
+            <span>上一篇：@if(!empty($prev_article))<a href='/{{$prev_article->arctype->real_path}}/{{$prev_article->id}}.html'>{{$prev_article->title}}</a>@else没有了@endif </span>
+            <span>下一篇：@if(!empty($next_article))<a href='/{{$next_article->arctype->real_path}}/{{$next_article->id}}.html'>{{$next_article->title}}</a>@else 没有了@endif </span>
         </div>
     </div>
-    @if(isset($thisBrandArticle))
-        <div class="brandinfo">
-            <div id="item1">
-                <div class="item1box">
-                    <div class="item1boxleft fl">
-                        <div class="title"><a href="/{{$thisBrandArticle->arctype->real_path}}/{{$thisBrandArticle->id}}.shtml">{{$thisBrandArticle->brandname}}</a></div>
-                        <div class="text">{{$thisBrandArticle->brandgroup}}</div>
-                        <div class="time"><span>{{date('Y-m-d',strtotime($thisBrandArticle->created_at))}}</span></div>
-                    </div>
-                    <div class="item1boxmiddle fl">
-                        <div class="top" style="font-weight: bold;">{{$thisBrandArticle->brandpay}}</div>
-                        <a href="/{{$thisBrandArticle->arctype->real_path}}/{{$thisBrandArticle->id}}.shtml#item5"><div class="bottom"></div></a>
-                    </div>
-                    <div class="item1boxright fr clearfix">
-                        <a href="#item5"><img class="js_popup" src="/mobile/images/liuyan.png" alt="在线留言"></a>
-                        <div class="text">在线留言</div>
-                    </div>
-                </div>
-            </div>
-            <hr>
-        </div>
-    @endif
-     <div class="a_content">
-        {!! $thisarticleinfos->body !!}
-    </div>
-    @include('mobile.liuyan')
-    @if(isset($xg_search))
-    <div id="item7">
-        <div class="item7box clearfix">
-            <i></i>
-            <div class="title">项目资讯</div>
-            <div class="item7content">
-                @foreach($xg_search as $xg_article)
-                    <div class="item7list">
-                        <a href="/{{$xg_article->arctype->real_path}}/{{$xg_article->id}}/">
-                            <div class="left fl">
-                                <div class="lefttitle">{{$xg_article->title}}</div>
-                                <div class="text">
-                                    <div class="message">来源：干洗店投资网</div>
-                                    <div class="time">{{date('Y-m-d',strtotime($xg_article->created_at))}}</div>
-                                </div>
-                            </div>
-                            <div class="right fr">
-                                <img src="{{$xg_article->litpic}}">
-                            </div>
-                        </a>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
-    @endif
-    <div id="item8">
-        <div class="item8box clearfix">
-            <i></i>
-            <div class="title">推荐品牌</div>
-            <div class="item8content">
-                @foreach($topbrands as $index=>$topbrand)
-                    <div class="item8list @if(($index+1)%2==0) fl @else fr @endif">
-                        <a href="/{{$topbrand->arctype->real_path}}/{{$topbrand->id}}.shtml">
-                            <img src="{{$topbrand->litpic}}" alt="{{$topbrand->brandname}}">
-                            <div class="item8listcontent">
-                                <div class="listtitle">{{$topbrand->brandname}}</div>
-                                <div class="listtext">
-                                    <p>{{$topbrand->brandgroup}}</p>
-                                </div>
-                                <div class="textleft fl">￥{{$topbrand->brandpay}}
-                                </div>
-                                <div class="textright fr">
-                                    {{date('Y-m-d',strtotime($topbrand->created_at))}}
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
+    <ul class="nav nav-pills nav-stacked nav-pills-stacked-example" style="clear: both;">
+        <p class="bg-primary">　<span class="glyphicon glyphicon-flag" style="font-size: 12pt;">　相关阅读</span></p>
+    </ul>
+    <ul class="list-group tjw_z">
+        @foreach($latesenews as $latesenew)
+        <li class="list-group-item"><a href="/{{$latesenew->arctype->real_path}}/{{$latesenew->id}}.html">{{$latesenew->title}}</a></li>
+        @endforeach
+    </ul>
 </div>
 @stop

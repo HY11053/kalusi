@@ -18,49 +18,36 @@
                 <div class="menu1">
                     <h3><img alt="" src="/frontend/images/a_1.png"></h3>
                     <ul>
-
                         @foreach($sontypes as $sontype)
                             <li><a href="/{{$sontype->real_path}}/">{{$sontype->typename}}</a></li>
                         @endforeach
-
                     </ul>
                 </div>
                 <div class="side11">
                     <div id="focus1" class="bgfff">
-                        <div class="zj_msg"><a href="/web/20161021083614/http://ganxi58.com/sb/sx/" target="_blank"></a></div>
-
+                        <div class="zj_msg"><a href="http://ganxi58.com/sb/sx/" target="_blank"></a></div>
                         <div class="titlemb"><span>产品中心</span></div>
-
-
                         <div class="doctors_inner">
-
                             <ul>
                                 <li>
                                     @foreach($productions as $production)
                                         <a href="/{{$production->arctype->real_path}}/{{$production->id}}.html">
-                                            <img src="{{$production->title}}" alt="{{$production->title}}" width="80" height="80">
+                                            <img src="{{$production->litpic}}" alt="{{$production->title}}" width="80" height="80">
                                             {{$production->title}}
                                         </a>
                                     @endforeach
                                 </li>
-
                             </ul>
-
                         </div>
-
                     </div>
                 </div>
-                <div><a title="门店选址评估" href="/web/20161021083614/http://ganxi58.com/" target="_blank"> <img src="/web/20161021083614im_/http://ganxi58.com/templets/lz/images/slv.png" width="250" height="112" alt="门店选址评估"></a></div>
+                <div><a title="门店选址评估" href="http://ganxi58.com/" target="_blank"> <img src="http://ganxi58.com/templets/lz/images/slv.png" width="250" height="112" alt="门店选址评估"></a></div>
 
                 <div class="side11">
                     <div id="focus1" class="bgfff">
-                        <div class="zj_msg"><a href="/web/20161021083614/http://ganxi58.com/kd/md/" target="_blank"></a></div>
-
+                        <div class="zj_msg"><a href="http://ganxi58.com/kd/md/" target="_blank"></a></div>
                         <div class="titlemb"><span>形象店展示</span></div>
-
-
                         <div class="doctors_inner">
-
                             <ul>
                                 <li>
                                     @foreach($mendianlists as $mendianlist)
@@ -81,9 +68,7 @@
                 <div class="titlen"><strong>NEWS</strong><span><a href="{{config('app.url')}}">主页</a> &gt; <a href="/{{$thistypeinfo->real_path}}/">{{$thistypeinfo->typename}}</a></span> </div>
                 <div class="bg_1"></div>
                 <div class="bg_2">
-
                     <ul>
-
                         <div class="news">
                             <ul class="news2">
                                 <li>
@@ -93,17 +78,9 @@
                             </ul>
                         </div>
                         <div class="pagination-wrapper">
-                            <div class="pagination">
-                                <li>首页</li>
-                                <li><a href="6_2.html">下一页</a></li>
-                                <li><a href="6_4.html">末页</a></li>
-
-                            </div>
+                            {!! $pagelists->links() !!}
                         </div>
-
-
                         <div class="bg_3"></div>
-
                     </ul></div>
             </div>
         </div>
