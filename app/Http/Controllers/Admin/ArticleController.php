@@ -104,7 +104,7 @@ class ArticleController extends Controller
                 }else{
                     $this->BaiduCurl(config('app.mip_history'),$miparticleurl,'熊掌号历史提交');
                 }
-                auth('admin')->user()->notify(new ArticlePublishedNofication(Archive::latest() ->first()));
+                auth('admin')->user()->notify(new ArticlePublishedNofication(Archive::withoutGlobalScope(PublishedScope::class)->latest() ->first()));
                 return redirect(action('Admin\ArticleController@Index'));
             }
         }
@@ -281,11 +281,12 @@ class ArticleController extends Controller
         }
         //图集处理
         $request['imagepics']=rtrim($request->input('imagepics'),',');
-        return $request;
-        if (Admin::where('id',auth('admin')->id())->value('type')!=1)
+		if (Admin::where('id',auth('admin')->id())->value('type')!=1)
         {
             $request['ismake']=0;
         }
+        return $request;
+        
     }
     /**当前用户发布的文档
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
