@@ -19,7 +19,7 @@
         <section class="top20">
             <div id="boxl" class="gr">
                 <div id="focus" class="bgfff">
-                    <div class="zj_msg"><a href="http://ganxi58.com/sb/sx/" target="_blank"></a></div>
+                    <div class="zj_msg"><a href="http://www.ganxi168.com/sb/sx/" target="_blank"></a></div>
                     <div class="titlemb"><span>产品中心</span></div>
                     <div class="doctors_inner">
                         <ul>
@@ -42,7 +42,7 @@
 
                 </div>
                 <div id="focus" class="bgfff">
-                    <div class="zj_msg"><a href="http://ganxi58.com/kd/md/" target="_blank"></a></div>
+                    <div class="zj_msg"><a href="http://www.ganxi168.com/kd/md/" target="_blank"></a></div>
                     <div class="titlemb"><span>形象店展示</span></div>
                     <div class="doctors_inner">
                         <ul>
@@ -60,7 +60,7 @@
                 <div class="boxlbox">
                     <div class="titlemb2"><span>精彩图文</span></div>
 
-                    <div class="zj_msg"><a href="http://ganxi58.com/xm/fx/" target="_blank"></a></div>
+                    <div class="zj_msg"><a href="http://www.ganxi168.com/xm/fx/" target="_blank"></a></div>
                     <ul>
 
                         @foreach($cnews as $cnew)
@@ -84,7 +84,7 @@
                         <div class="xihuan_qh_txt">
                             <ul>
                                 @foreach($latesenews as $latesenew)
-                                <li><a href="/{{$latesenew->arctype->real_path}}/{{$latesenew->id}}.html" target="_blank">{{$latesenew->title}}</a></li>
+                                <li><a href="/{{$latesenew->arctype->real_path}}/{{$latesenew->id}}.html" target="_blank">{{str_limit($latesenew->title,40,'')}}</a></li>
                                 @endforeach
                             </ul>
                         </div>
@@ -95,7 +95,7 @@
 
             <div id="boxr" class="gl bgfff">
 
-                <div class="items">当前位置：<a href="http://www.ganxi58.com/">主页</a> &gt; <a href="http://ganxi58.com/jt/">集团介绍</a> &gt; <a href="http://ganxi58.com/news/">新闻资讯</a> &gt;  </div>
+                <div class="items">当前位置：<a href="http://www.ganxi58.com/">主页</a> &gt; <a href="http://www.ganxi168.com/jt/">集团介绍</a> &gt; <a href="http://www.ganxi168.com/news/">新闻资讯</a> &gt;  </div>
 
                 <div class="content_tie">
                     <h1>{{$thisarticleinfos->title}}</h1>

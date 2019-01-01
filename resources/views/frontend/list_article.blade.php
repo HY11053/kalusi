@@ -25,7 +25,7 @@
                 </div>
                 <div class="side11">
                     <div id="focus1" class="bgfff">
-                        <div class="zj_msg"><a href="http://ganxi58.com/sb/sx/" target="_blank"></a></div>
+                        <div class="zj_msg"><a href="http://www.ganxi168.com/sb/sx/" target="_blank"></a></div>
                         <div class="titlemb"><span>产品中心</span></div>
                         <div class="doctors_inner">
                             <ul>
@@ -41,11 +41,11 @@
                         </div>
                     </div>
                 </div>
-                <div><a title="门店选址评估" href="http://ganxi58.com/" target="_blank"> <img src="http://ganxi58.com/templets/lz/images/slv.png" width="250" height="112" alt="门店选址评估"></a></div>
+                <div><a title="门店选址评估" href="http://www.ganxi168.com/" target="_blank"> <img src="http://www.ganxi168.com/templets/lz/images/slv.png" width="250" height="112" alt="门店选址评估"></a></div>
 
                 <div class="side11">
                     <div id="focus1" class="bgfff">
-                        <div class="zj_msg"><a href="http://ganxi58.com/kd/md/" target="_blank"></a></div>
+                        <div class="zj_msg"><a href="http://www.ganxi168.com/kd/md/" target="_blank"></a></div>
                         <div class="titlemb"><span>形象店展示</span></div>
                         <div class="doctors_inner">
                             <ul>

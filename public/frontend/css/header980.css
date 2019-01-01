@@ -317,6 +317,8 @@ a.none980,.Z_TypeList dl{display:block}
 .bg_2{width:740px; background:url(../images/about_07.png) repeat-y;overflow:hidden;}
 .bg_3{width:740px; height:5px; background:url(../images/about_08.png) no-repeat;overflow:hidden;}
 .introduction{padding:30px 30px 30px 30px;  color:#585858; font-size:14px; line-height:22px;}
+.introduction p{text-indent: 1.5em; line-height: 25px; margin-bottom: 10px;}
+.introduction p img{max-width: 100%; }
 .product{margin:0 auto; width:1000px;}
 dl.pd_list_dl{ border:3px solid #2db3a6;width: 230px;height:290px;overflow:hidden; float:left; margin-bottom:5px; margin-right:5px; margin-left:5px; margin-top:10px;}
 dl.pd_list_dl:hover{ border:3px solid #ce4d02;}

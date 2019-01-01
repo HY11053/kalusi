@@ -54,26 +54,3 @@ $(document).ready(function(){
 
 
 });
-/*
-     FILE ARCHIVED ON 13:12:31 Aug 29, 2018 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 03:59:26 Dec 27, 2018.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
-
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
-/*
-playback timings (ms):
-  LoadShardBlock: 59.479 (3)
-  esindex: 0.009
-  captures_list: 239.924
-  CDXLines.iter: 10.393 (3)
-  PetaboxLoader3.datanode: 106.572 (4)
-  exclusion.robots: 165.261
-  xauthn.chkprivs: 0.036
-  exclusion.robots.policy: 165.246
-  RedisCDXSource: 2.006
-  PetaboxLoader3.resolve: 12.617
-  xauthn.identify: 164.945
-  load_resource: 110.996
-*/

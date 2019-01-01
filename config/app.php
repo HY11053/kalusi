@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', '干洗店投资网'),
+    'name' => env('APP_NAME', '美国卡露丝洗衣国际'),
 
     /*
     |--------------------------------------------------------------------------
@@ -133,7 +133,7 @@ return [
     | and other related settings
     */
     'webname'=>'干洗店|干洗店加盟|干洗店加盟连锁-美国卡露丝洗衣国际集团',
-    'indexname'=>'卡露丝国际洗衣',
+    'indexname'=>'美国卡露丝洗衣国际集团',
     'keywords'=>'干洗店,干洗店加盟,干洗店加盟连锁',
     'description'=>'卡露丝国际健康干洗,干洗店加盟首选品牌,全国干洗店加盟连锁机构,干洗机厂家直销, 提供全套洗衣房设备,',
     //'api'=>'http://data.zz.baidu.com/urls?site=www.czga.cn&token=QeSFIvl5RWRgU3BT',

@@ -21,7 +21,7 @@ class RedirectUrlMiddleware
             $redirecturl=config('app.url').$_SERVER['REQUEST_URI'];
             return redirect($redirecturl,302);
         }
-        if (preg_match('#(.*)/$#',$_SERVER['REQUEST_URI'],$matches) || str_contains($request->url(),'.shtml' ))
+        if (preg_match('#(.*)/$#',$_SERVER['REQUEST_URI'],$matches) || str_contains($request->url(),'.html' ))
         {
 
             if ((str_contains($request->url(),'www.')) && Agent::isMobile())
@@ -31,7 +31,7 @@ class RedirectUrlMiddleware
             }
             return $next($request);
         }else{
-            if ((str_contains($request->url(),'complate')) ||  (str_contains($request->url(),'crosscomplate')) || str_contains($request->url(),'captcha') || str_contains($request->url(),'.shtml'))
+            if ((str_contains($request->url(),'complate')) ||  (str_contains($request->url(),'crosscomplate')) || str_contains($request->url(),'captcha') || str_contains($request->url(),'.html'))
             {
                 return $next($request);
             }else{

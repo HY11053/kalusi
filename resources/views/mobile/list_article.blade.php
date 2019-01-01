@@ -1,6 +1,6 @@
 @extends('mobile.mobile')
 @section('headlibs')
-    <title>{{$thistypeinfo->title}}_UCC干洗</title>
+    <title>{{$thistypeinfo->title}}_卡露丝国际洗衣</title>
     <meta name="keywords" content="{{$thistypeinfo->keywords}}" />
     <meta name="description" content="{{$thistypeinfo->description}}" />
     <link rel="canonical" href="{{config('app.url')}}{{Request::getrequesturi()}}" >

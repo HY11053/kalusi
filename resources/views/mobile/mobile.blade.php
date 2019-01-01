@@ -29,7 +29,7 @@
             <li><a href="/xm/">加盟项目</a></li>
             <li><a href="/kd/">投资开店</a></li>
             <li><a href="/news/">新闻资讯</a></li>
-            <li><a href="join/bk/">洗涤百科</a></li>
+            <li><a href="/join/bk/">洗涤百科</a></li>
             <li><a href="/kd/yw/">开店疑问</a></li>
         </ul>
     </div>
@@ -44,12 +44,6 @@
     </ol>
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <a href="javascript:void(0)" onclick="openZoosUrl();return false;"><img class="center-block" src="/mobile/images/1.jpg" alt="卡露丝国际洗衣店面展示"></a>
-        </div>
-        <div class="item">
-            <a href="javascript:void(0)" onclick="openZoosUrl();return false;"><img class="center-block" src="/mobile/images/2.jpg" alt="卡露丝国际洗衣店面展示"></a>
-        </div>
-        <div class="item">
             <a href="javascript:void(0)" onclick="openZoosUrl();return false;"><img class="center-block" src="/mobile/images/3.jpg" alt="卡露丝国际洗衣店面展示"></a>
         </div>
     </div>
@@ -81,10 +75,9 @@
             <div class="address_pic1 absolute"></div>
             <!--<div class="address_pic2 absolute"></div>-->
             <address class="col-xs-offset-5">
-                <span class="glyphicon glyphicon-earphone"></span> 400-8856-638 <br>
-                <span class="glyphicon glyphicon-ok-circle"></span> 沪ICP备14001404号-22<br>
-                <span class="glyphicon glyphicon-map-marker"></span> 上海市沪路4361号（呼叫中心产业基地）
-                Copyright@2007-2018 卡露丝国际洗衣集团干洗店加盟 <br>
+                <span class="glyphicon glyphicon-ok-circle"></span> 沪ICP备09015577号-1<br>
+                <span class="glyphicon glyphicon-map-marker"></span> 上海市宝山区城银路555弄
+                Copyright@2007-2019 上海露丽洗涤设备有限公司 <br>
                 <span class="glyphicon glyphicon-ok-circle"></span>  上海优喜洗烫设备有限公司 <br>
             </address>
 
@@ -94,7 +87,7 @@
 <script src="/mobile/js/jquery.min.js"></script>
 <script src="/mobile/js/bootstrap.min.js"></script>
 @if(!Jenssegers\Agent\Facades\Agent::isRobot())
-
+    <script src="/mobile/js/mswt.js"></script>
 @endif
 <script>
     $(function(){

@@ -1,6 +1,6 @@
 @extends('mobile.mobile')
 @section('headlibs')
-    <title>{{$thistypeinfo->title}}_UCC干洗</title>
+    <title>{{$thistypeinfo->title}}_卡露丝国际洗衣</title>
     <meta name="keywords" content="{{$thistypeinfo->keywords}}" />
     <meta name="description" content="{{$thistypeinfo->description}}" />
     <link rel="canonical" href="{{config('app.url')}}{{Request::getrequesturi()}}" >
@@ -9,8 +9,16 @@
     <p class="bg-primary">   <a href="/">干洗店加盟</a> ><a href="/{{$thistypeinfo->real_path}}/">{{$thistypeinfo->typename}}</a></p>
     <div class="container-fluid list_clear">
         <div clas="row">
-            <div class="ul_list">
-                {!! $thistypeinfo->contents !!}
+            <div class="box box-solid">
+                <div class="box-header panel-heading with-border">
+                    <span class="glyphicon glyphicon-send"></span>
+                    <h3 class="box-title">{{$thistypeinfo->typename}}</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    {!! $thistypeinfo->contents !!}
+                </div>
+                <!-- /.box-body -->
             </div>
         </div>
         <ul class="nav nav-pills nav-stacked nav-pills-stacked-example" style="clear: both;">

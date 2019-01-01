@@ -3,7 +3,7 @@
 <title>{{config('app.webname')}}</title>
 <meta name="description" content="{{config('app.description')}}">
 <meta name="keywords" content="{{config('app.keywords')}}">
-<meta name="author" content="UCC洗衣">
+<meta name="author" content="卡露丝国际洗衣">
 <link rel="canonical" href="{{config('app.url')}}" >
 <meta name="baidu-site-verification" content="hHwAKFLfhj" />
 <meta name="sogou_site_verification" content="hbZyekUb3t"/>
@@ -24,13 +24,6 @@
                     <div><a href="/kd/yw/"><img src="/mobile/images/indexIcos/icon8.png"><span>开店疑问 </span></a></div>
                 </div>
             </ul>
-        </div>
-    </div>
-    <a  href="javascript:void(0);" onclick="online();return false;" class="ad01"><img src="/mobile/images/ad01.jpg"></a>
-    <!--about-->
-    <div class="about">
-        <div>
-            <script type="text/javascript" charset="utf-8" src="http://yuntv.letv.com/player/vod/bcloud.js"></script> <script type="text/javascript"> var player = new CloudVodPlayer(); player.init({"uu":"29def2a1d5","vu":"38eb6e14bd","auto_play":1,"gpcflag":1,"width":'auto',"height":220,"lang":"zh_CN"}); </script>
         </div>
     </div>
     <!--店面-->
